@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.3.1.js"></script>
+    <link href="js/bootstrap-datetimepicker.css" rel="stylesheet">
+    <script src="js/bootstrap-datetimepicker.min.js"></script>
+</head>
+<body>
+<table>
+    <tr>
+        <td><div>222</div></td>
+        <td><div>3333</div></td>
+    </tr>
+</table>
+<input type="text" class="form_date">
+<script type="text/javascript">
+
+    function formatDateTime (date) {
+        var y = date.getFullYear();
+        var m = date.getMonth() + 1;
+        m = m < 10 ? ('0' + m) : m;
+        var d = date.getDate();
+        d = d < 10 ? ('0' + d) : d;
+        var h = date.getHours();
+        var i = date.getMinutes();
+        var s =date.getSeconds();
+      var a= y+"-"+ m +"-"+ d+" "+h+":"+i+":"+s;
+      return y+"-"+ m +"-"+ d;
+    }
+    $(function () {
+        alert( getNowFormatDate() )
+    })
+    // 获取当前系统时间戳
+    function getNowFormatDate() {
+        var date = new Date();
+        var seperator1 = "-";
+        var seperator2 = ":";
+        var month = date.getMonth() + 1;
+        var strDate = date.getDate();
+        if (month >= 1 && month <= 9) {
+            month = "0" + month;
+        }
+        if (strDate >= 0 && strDate <= 9) {
+            strDate = "0" + strDate;
+        }
+        var currentdate =  date.getHours() + seperator2 + date.getMinutes()
+            + seperator2 + date.getSeconds();
+        return currentdate;
+    }
+</script>
+</body>
+</html>

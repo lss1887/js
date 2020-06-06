@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<!--引入外部框架-->
+<script src="js/myjquery.js"></script>
+<!--获取div中的文本内容-->
+<script>
+    window.onload = function () {
+        //1.根据id获取div标签
+        /*var element = document.getElementById("d1");*/
+        var element = $("#d1");
+        //2.获取标签体里面的内容
+        var content = element.innerHTML;
+        alert(content)
+    }
+</script>
+<body>
+<div id="d1">你好世界</div>
+<div id="d2">hello world</div>
+</body>
+</html>

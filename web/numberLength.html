@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数字长度 自动补0</title>
+    <script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+
+<script>
+    $(function () {
+        // var a = 1;
+        // alert(a.length)
+        alert(formatZero(111,3))
+    })
+
+    /** * 自定义函数名：formatZero
+
+     * @param num： 需要补零的数值
+
+     * @param len： 补零后的总位数
+
+     */
+    function formatZero(num, len) {
+        if(String(num).length > len) return num;
+        return (Array(len).join(0) + num).slice(-len);
+    }
+</script>
+
+</body>
+</html>

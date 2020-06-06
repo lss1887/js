@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<div id="dd"></div>
+<script>
+    $(function () {
+        var keyInfo = "if(this.value.length==1){this.value=this.value.replace(/[^0-9]/g,&#39;&#39;)}else{this.value=this.value.replace(/\D/g,&#39;&#39;)}";
+
+        var info = "<input type='text' onkeyup='"+keyInfo+"' value='990'>";
+        $("#dd").html(info);
+    })
+</script>
+</body>
+</html>

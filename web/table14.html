@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表头固定</title>
+
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.3.1.js"></script>
+
+</head>
+<body>
+<div id="right_div">
+    <div id="right_div1">
+        <div id="right_divx">
+            <table id="right_table1" class="table table-bordered">
+                <tr>
+                    <th>我是表头</th>
+                    <th>我是表头</th>
+                    <th>我是表头</th>
+                    <th>我是表头</th>
+                    <th>我是表头</th>
+                    <th>我是表头</th>
+                    <th>我是表头</th>
+                    <th>我是表头</th>
+                    <th>我是表头</th>
+                    <th>我是表头</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div id="right_div2">
+        <table id="right_table2" class="table table-bordered">
+        </table>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    $("#right_div2").onscroll = function () {
+        var right_div2_top = this.scrollTop;
+        var right_div2_left = this.scrollLeft;
+        $("#left_div2").scrollLeft = right_div2_left;
+        $("#left_div2").scrollTop = right_div2_top;
+
+    }
+})
+    
+</script>
+</body>
+</html>

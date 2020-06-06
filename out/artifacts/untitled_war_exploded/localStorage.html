@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<div>222</div>
+<input type="button"value="eeee" onclick="fn1()">
+
+<script type="text/javascript">
+    function fn1() {
+        alert(1)
+        if (!window.localStorage){
+            alert("不支持");
+            return false;
+        }else {
+            var storage=window.localStorage;
+            storage.setItem("c",3);
+            console.log(storage.getItem("c"))
+        }
+    }
+
+</script>
+</body>
+</html>

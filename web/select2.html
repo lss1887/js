@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link href="js/select2.min.css" rel="stylesheet">
+</head>
+<body>
+<input type="button" value="显示" onclick="show()">
+<input type="button" value="隐藏" onclick="hide()">
+<div id="body" style="margin: 20px auto; width: 400px;">
+    <select id="e8"  class="combox">
+        <optgroup label="水果">
+            <option value="苹果">苹果</option>
+            <option value="梨">梨</option>
+            <option value="香蕉">香蕉</option>
+            <option value="西瓜">西瓜</option>
+        </optgroup>
+        <optgroup label="蔬菜">
+            <option value="上海青">上海青</option>
+            <option value="南瓜">南瓜</option>
+            <option value="西红柿">西红柿</option>
+            <option value="茄子">茄子</option>
+        </optgroup>
+        <optgroup label="书籍">
+            <option value="温暖的炫">温暖的炫</option>
+            <option value="从我身边路过">从我身边路过</option>
+            <option value="钢铁是怎么样练成">钢铁是怎么样练成</option>
+        </optgroup>
+    </select>
+</div>
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/select2.full.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $("#e8").select2();
+    });
+    function show() {
+        $("#body").removeAttr($("#body").style.display)
+    }
+    function hide() {
+
+    }
+</script>
+</body>
+</html>

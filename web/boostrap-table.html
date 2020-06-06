@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>boostrap-table</title>
+    <script src="js/jquery-3.3.1.js"></script>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <script src="js/bootstrap.min.js"></script>
+
+    <link href="css/bootstrap-table.css">
+    <script src="js/bootstrap-table.js"></script>
+
+    <link href="css/bootstrap-table-fixed-columns.css">
+    <script src="js/bootstrap-table-fixed-columns.js"></script>
+</head>
+<body>
+
+<table  class="table table-bordered" id="table" style="width: 100px;">
+    <thead>
+    <tr>
+        <th>表头一</th>
+        <th>表头二</th>
+        <th>表头三</th>
+        <th>表头四</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+    </tr>
+    </tbody>
+</table>
+
+<script type="text/javascript">
+    $(function () {
+        $("#table").bootstrapTable('desrtoy').bootstrapTable({
+            fixedColumns: true,
+            fixedNumber: 1 //固定列数
+        })
+    })
+</script>
+
+</body>
+</html>

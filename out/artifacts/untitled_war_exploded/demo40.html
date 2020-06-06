@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.3.1.js"></script>
+    <link href="css/bootstrap.css">
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<span>
+    <i class="glyphicon glyphicon-chevron-up"></i>
+    <i class="glyphicon glyphicon-chevron-down"></i>
+</span>
+
+<input onclick="gh()" value="1" type="button">
+<input onclick="gh2()" value="2" type="button">
+<script type="text/javascript">
+    function gh() {
+        localStorage.setItem("it",888);
+    }
+    function gh2() {
+        var a=localStorage.getItem("it");
+        alert(a);
+    }
+</script>
+</body>
+</html>

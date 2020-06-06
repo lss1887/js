@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格</title>
+</head>
+<body>
+<!--
+11. 表格：
+    table：表格本身
+        border：边框线。1：表示有边框，0：表示没有边框
+        width：表格的宽度
+        cellspacing：表格里单元格之间的间隔（消除类似于双边框的效果）
+        bgcolor：背景颜色
+        align：表格的水平位置
+
+    tr：table row，行标签，一个table里可以有n多个tr
+        align：行里内容的水平位置
+
+    td：table data，单元格，一个tr里可以有n多个td
+        align：单元格里内容的水平位置
+
+    th：table head，表头单元格，是一种特殊的td。
+        用法和td是完全一样的，仅仅是自带样式：居中并且加粗
+
+    caption：表格的标题。
+        是table的子标签，一般放在第1个tr之前
+-->
+
+<table border="1" width="200" cellspacing="0">
+    <!‐‐tr表示一行‐‐>
+    <tr><!‐‐表示一列‐‐>
+        <td>100</td>
+        <td>200</td>
+        <td>300</td>
+    </tr>
+    <tr><!‐‐表示一列‐‐>
+        <td>400</td>
+        <td>500</td>
+        <td>600</td>
+    </tr>
+    <tr>
+        <td colspan="3">999</td>
+    </tr>
+</table>
+</body>
+</html>

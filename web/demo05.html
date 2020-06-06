@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>隐藏</title>
+    <script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<div id="tt">33</div>
+<input type="button" value="1" onclick="rf1()">
+<input type="button" value="2" onclick="rf2()">
+<input type="button" value="3" onclick="rf3()">
+<input type="button" value="4" onclick="rf4()">
+<script type="text/javascript">
+    function rf1() {
+        $("#tt").hide();
+    }
+    function rf2() {
+        $("#tt").show();
+    }
+    function rf3() {
+        $("#tt").attr("style","display:none");
+    }
+    function rf4() {
+        $("#tt").removeAttr("style")
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<select id="selectid" multiple="multiple">
+    <option>中</option>
+    <option>公</option>
+    <option>社</option>
+    <option>办</option>
+</select>
+<input type="hidden" id="wocao">
+<button id="btn" onclick="selectValue()">cdcd</button>
+
+<script>
+    function selectValue(){
+        var selectVal = document.getElementById("selectid");
+        var value="";
+        for(var i=0;i<selectVal.options.length;i++){
+            if(selectVal.options[i].selected){
+                value+= selectVal.options[i].value+",";
+            }
+        }
+        document.getElementById("wocao").value=value;
+        alert(document.getElementById("wocao").value);
+    }
+</script>
+</body>
+</html>

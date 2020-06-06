@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>datetimepicker</title>
+    <script src="js/jquery-3.3.1.js"></script>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <script src="js/bootstrap.min.js"></script>
+    <link href="js/bootstrap-datetimepicker-master/css/bootstrap-datetimepicker.css" rel="stylesheet">
+
+
+    <script src="js/bootstrap-datetimepicker-master/js/bootstrap-datetimepicker.js"></script>
+    <script src="js/bootstrap-datetimepicker.zh-CN.js"></script>
+</head>
+<body>
+<input size="16" type="text" readonly class="form_datetime">
+
+<script type="text/javascript">
+    $(".form_datetime").datetimepicker({
+        format: 'yyyy-mm',
+        language: 'zh-CN',
+        initialDate:new Date(),
+        autoclose: true,
+        minView: 2
+    })
+</script>
+
+</body>
+</html>

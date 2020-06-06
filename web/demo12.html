@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>日期格式</title>
+
+    <script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<div id="uu"></div>
+<script type="text/javascript">
+    $(function () {
+        alert(formatDate(new Date(1573747200 * 1000)))
+    })
+
+    function formatDate(datetime) {
+        var year = datetime.getFullYear(),
+            month = ("0" + (datetime.getMonth() + 1)).slice(-2),
+            date = ("0" + datetime.getDate()).slice(-2),
+            hour = ("0" + datetime.getHours()).slice(-2),
+            minute = ("0" + datetime.getMinutes()).slice(-2);
+        var result = year + "-" + month + "-" + date + " " + hour + ":" + minute;
+        return result;
+    }
+</script>
+</body>
+</html>

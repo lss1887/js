@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格</title>
+    <script src="js/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+
+        function display(){
+            document.getElementById("box").style.display="block";
+        }
+        function disappear(){
+           $("#box").show();
+        }
+
+    </script>
+    <style type="text/css">
+        <!--
+        #box{
+            display:none;
+            width: 315px;
+            height: 180px;
+            background:#CCC;
+            border:1px solid #333;
+            padding:12px;
+            text-align:center;
+
+        }
+        .detail{
+            width: 300px;
+            position: absolute;
+            padding: 50px;
+            border-radius: 10px;
+            background-color: #FCFDF8;
+            display: none;
+        }
+        #ddd:hover .detail{
+            display: block;
+        }
+
+    </style>
+
+</head>
+<body>
+<!--
+11. 表格：
+    table：表格本身
+        border：边框线。1：表示有边框，0：表示没有边框
+        width：表格的宽度
+        cellspacing：表格里单元格之间的间隔（消除类似于双边框的效果）
+        bgcolor：背景颜色
+        align：表格的水平位置
+
+    tr：table row，行标签，一个table里可以有n多个tr
+        align：行里内容的水平位置
+
+    td：table data，单元格，一个tr里可以有n多个td
+        align：单元格里内容的水平位置
+
+    th：table head，表头单元格，是一种特殊的td。
+        用法和td是完全一样的，仅仅是自带样式：居中并且加粗
+
+    caption：表格的标题。
+        是table的子标签，一般放在第1个tr之前
+-->
+<span id="ddddd">12</span>
+<table border="1" width="200" cellspacing="0" style="margin-top: 500px">
+    <!‐‐tr表示一行‐‐>
+    <tr><!‐‐表示一列‐‐>
+        <td>100</td>
+        <td>200</td>
+        <td id="ddd">300
+        <div class="detail">
+            <p>急急急急急急急急急急急急经济</p>
+            <p>急急急急急急急急急急急急经济</p>
+            <p>急急急急急急急急急急急急经济</p>
+        </div>
+        </td>
+    </tr>
+    <tr><!‐‐表示一列‐‐>
+        <td>400</td>
+        <td>500</td>
+        <td>600</td>
+    </tr>popovers
+    <tr>
+        <td colspan="3">999</td>
+    </tr>
+    <a href="#" οnmοuseοver="display()" o="disappear()">
+        鼠标放到这儿！
+    </a>
+    <div id="box" οnmοuseοver="display()" οnmοuseοut="disappear()">
+        效果不错吧？这里面你可以设置一张图片，也可以是一段文字，
+        而且源代码很简单哦！
+    </div>
+
+
+</table>
+
+<script>
+$(function () {
+    var a ="dfsdddfaaaaaaaaaaaaaaaaaaaaaaaaaa";
+    var bv="";
+    while (a.length >10){
+       var c = a.substring(0,10);
+       a = a.substring(10,a.length);
+        bv += c +"\n";
+    }
+    if(a.length <10){
+        bv += a ;
+    }
+  $("#ddddd").html(bv) ;
+})
+</script>
+</body>
+</html>

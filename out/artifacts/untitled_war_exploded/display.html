@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>display:none</title>
+    <script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<div  id="tt" style="display: none">
+    sss
+</div>
+<input type="button" value="dd" onclick="fn1()">
+<input type="text" value="ddee" id="ddd" style="height: 150px;width: 500px">
+<input type="text" value="33">
+<script type="text/javascript">
+    function fn1() {
+        $("#ddd").attr("disabled","");
+    }
+    function fn2() {
+        $("#tt").attr("style","display: none");
+    }
+</script>
+</body>
+</html>

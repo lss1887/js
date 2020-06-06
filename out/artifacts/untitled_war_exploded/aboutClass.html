@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取多个值 同一个class</title>
+    <script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<input type="text" value= 1,2017-03-10 class="ttt"></input>
+<input type="text" value= 2,2017-03-13 class="ttt"></input>
+<div style="font-weight: 500">斤</div>
+<script type="text/javascript">
+
+        $(function () {
+            var arr=new Array();
+            $(".ttt").each(function (key ,value) {
+                alert(arr[key]=$(this).val());
+            })
+            console.log(arr);
+        })
+</script>
+</body>
+</html>

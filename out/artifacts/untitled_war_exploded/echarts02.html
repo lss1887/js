@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>柱状图</title>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<div id="main" style="width: 1200px;height: 600px" ></div>
+<script type="text/javascript">
+    var a=3;
+    var myChart=echarts.init(document.getElementById('main'));
+    var option = {
+    product:50,
+        // title: {
+        //     text: '世界人口总量',
+        //     subtext: '数据来自网络',
+        //     textAlign: 'center'
+        // },
+        tooltip: {
+            trigger: 'axis',
+            // formatter:function(params){
+            // if (params.index()==0){
+            //     return '333333333333333333333';
+            // }
+            // if (params.index()==1){
+            //     return '444444';
+            // }
+            // },
+            axisPointer: {
+                type: 'shadow'
+            },
+
+        },
+        // legend: {
+        //     data: ['2011年', '2012年']
+        // },
+        grid: {
+            left: '5%',
+            right: '20%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis: {
+            type: 'value',
+            boundaryGap: [0, 0.01],
+            color:'red'
+        },
+        yAxis: {
+            type: 'category',
+            data: ['排期预定量',' ADX发起竞价请求数','DSP竞价响应数','  DSP有效竞价数','  DSP竞价成功数','服务器请求下发广告数','  客户端尝试曝光','  广告曝光量','  广告点击量'],
+            axisLabel: {
+                // interval: 0,
+                // rotate: 30,
+                fontWeight :2000,
+                color:'black'
+            },
+        },
+        graphic: [
+            {
+                type: 'group',
+                right: '1%',
+                bottom: '10%',
+                // top: 'center',
+                children: [
+                    {
+                        type: 'rect',
+                        // z: 100,
+                        left: 'center',
+                        top: 'middle',
+                        shape: {
+                            width: 170,
+                            height: 100
+                        },
+                        style: {
+                            fill: '#fff',
+                            // stroke: '#555',
+                            lineWidth: 2,
+                            shadowBlur: 8,
+                            shadowOffsetX: 3,
+                            shadowOffsetY: 3,
+                            shadowColor: 'rgba(0,0,0,0.3)'
+                        }
+                    },
+                    {
+                        type: 'text',
+                        // z: 100,
+                        left: 'center',
+                        top: 'middle',
+                        bottom:'10%',
+                        style: {
+                            fill: '#333',
+                            text: [
+                                '横轴表示温度',
+                                '纵轴表示高度，单位是km',
+                                '右上角有一个图片做的水印',
+                                '这个文本块可以放在图中各',
+                                '种位置'
+                            ].join('\n'),
+                            font: '14px Microsoft YaHei'
+                        }
+                    }
+                ]
+            }
+        ],
+        series: [
+            {
+                // name: '2011年',
+                type: 'bar',
+                color:'lightBlue',
+                data: [0, 102074, 101294, 73675, 73475, 30149,1457,1457,111],
+                label: {
+                    show: true,
+                    position: 'insideRight',
+                    distance: -1,
+                    formatter: '{percentage|{@[1]}%}',
+                    rich: {
+                        percentage: {
+                            color: 'black',
+                            textBorderColor:'white',
+                            width: 1
+                        }
+                    }
+                }
+            }
+
+        ]
+    };
+    myChart.setOption(option)
+    // myChart2.setOption(option);
+
+    myChart.on("click",function () {
+        alert(1);
+    })
+</script>
+</body>
+</html>

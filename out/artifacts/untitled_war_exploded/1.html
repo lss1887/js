@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<span id="showSpan3">
+
+    <span id="show31" inputvalue="1">
+                <span style="margin-left: 20px">一线</span>
+                <a class="glyphicon glyphicon-remove" href="javascript:void(0);" onclick="removeChecked(this,firestCitiesCheckBox)" id="a1" style="float: right;"></a>
+                <br><br>
+    </span>
+    <span id="show32" inputvalue="2">
+    <span style="margin-left: 20px">二线</span>
+        <a class="glyphicon glyphicon-remove" href="javascript:void(0);" onclick="removeChecked(this,secondCitiesCheckBox)" id="a2" style="float: right;"></a>
+        <br><br>
+    </span>
+</span>
+
+<script>
+    $(function () {
+        $("#showSpan3 span").each(function () {
+
+           if(typeof ($(this).attr("inputvalue")) != "undefined" ){
+               console.log("==================="+$(this).attr("inputvalue"))
+           }
+        })
+    })
+</script>
+
+</body>
+</html>

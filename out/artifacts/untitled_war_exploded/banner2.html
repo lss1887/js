@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap 实例</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <!--    <script type="text/javascript" src="/jquery-1.11.3.min.js"></script>-->
+    <script src="js/jquery-3.3.1.js"></script>
+    <!--    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>-->
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- 指示器 -->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
+    <!-- 轮播图片及说明文字 -->
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="img/t4.jpg" alt="图片1">
+        </div>
+        <div class="item">
+            <img src="img/t3.jpg" alt="图片2">
+        </div>
+        <div class="item">
+            <img src="img/t2.jpg" alt="图片3">
+        </div>
+    </div>
+    <!-- 控制按钮：左右切换 -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left">before</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right">nest</span>
+    </a>
+</div>
+
+</body>
+</html>

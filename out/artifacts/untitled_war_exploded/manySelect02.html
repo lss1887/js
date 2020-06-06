@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多选下拉</title>
+</head>
+<body>
+<div style="width:170px;position:relative;">
+    <div class="jd-select form-control" style="width:170px;"></div>
+    <div class="jd-select-cont">
+        <input type="text" class="search-input" placeholder="搜索" />
+        <ul>
+            <li class="jd-li">
+                <input type="checkbox" class=" checkbox-jd pull-left" value="1" style="width:22px;height:30px;margin:0;" /><span class="type-name pull-left">品类1</span>
+            </li>
+            <li class="jd-li">
+                <input type="checkbox" class="checkbox-jd pull-left" value="2" style="width:22px;height:30px;margin:0;" /><span class="type-name pull-left">品类2</span>
+            </li>
+            <li class="jd-li">
+                <input type="checkbox" class="checkbox-jd pull-left" value="3" style="width:22px;height:30px;margin:0;" /><span class="type-name pull-left">品类3</span>
+            </li>
+            <li class="jd-li">
+                <input type="checkbox" class="checkbox-jd pull-left" value="4" style="width:22px;height:30px;margin:0;" /><span class="type-name pull-left">品类4</span>
+            </li>
+            <li class="jd-li">
+                <input type="checkbox" class="checkbox-jd pull-left" value="5" style="width:22px;height:30px;margin:0;" /><span class="type-name pull-left">品类5</span>
+            </li>
+        </ul>
+        <div class="btn-cont">
+            <div class="sure-btn" id="sure-btn">确定</div>
+            <div class="cancel-btn" id="cancel-btn">取消</div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    var arrC;
+    var varrC;
+    var arrcheckd;
+    var varrcheckd;
+    var arrRecord;
+    var varrRecord;
+    var arr;
+    var varr;
+    var arrSearch;
+    var arrSearchChecked;
+    var varrSearch;
+    var varrSearchChecked;
+    $(function () {
+
+        arrC = new Array();
+        varrC = new Array();
+        arrcheckd = new Array();
+        varrcheckd = new Array();
+        arrcheckd = localStorage.getItem("arrcheckd");
+        varrcheckd = localStorage.getItem("varrcheckd");
+        arrRecord;
+        varrRecord;
+        arr = new Array();
+        varr = new Array();
+        if(arrcheckd) {
+            arrRecord = arrcheckd.split(",");
+            varrRecord = varrcheckd.split(",");
+        } else {
+            arrRecord = new Array();
+            varrRecord = new Array();
+        }
+        $(".jd-select-cont ul li span").each(function() {
+            var op = $(this).text();
+            if($.inArray(op, arrRecord) == -1) {
+                arr.push(op);
+                varr.push($(this).prev("input").val());
+            }
+        });
+
+        arr = arrRecord.concat(arr);
+        varr = varrRecord.concat(varr);
+    })
+    //点击多选框事件
+    $("body").on('click', ".checkbox-jd", function() {
+        if($(this).prop("checked")) {
+            $(this).prop("checked");
+            arrRecord.push($(this).next(".type-name").html());
+            varrRecord.push($(this).val());
+        } else {
+            $(this).removeProp("checked");
+            arrRecord.splice($.inArray($(this).next(".type-name").html(), arrRecord), 1);
+            varrRecord.splice($.inArray($(this).val(), varrRecord), 1);
+        }
+    });
+    //点击保存多选框事件
+    $("#sure-btn").click(function() {
+        $(".jd-select-cont").hide();
+        console.log("arrRecord.length===" + arrRecord.length)
+        window.localStorage.setItem("arrcheckd", arrRecord.toString()); //存数据
+        window.localStorage.setItem("varrcheckd", varrRecord.toString()); //存数据
+    });
+    //点击取消保存多选框事件
+    $(".cancel-btn").click(function() {
+        $(".jd-select-cont").hide();
+    });
+    //点击展开下拉列表并排序
+    $(".jd-select").click(function() {
+        $(".jd-select-cont").show();
+        $(".search-input").val("");
+        searchJD("");
+        //搜索
+        arrSearch = new Array();
+        arrSearchChecked = new Array();
+        varrSearch = new Array();
+        varrSearchChecked = new Array();
+        $(".search-input").keyup(function() {
+            var searchValue = $(".search-input").val();
+            searchJD(searchValue);
+        });
+    });
+
+    function showAll() {
+
+        var arrNew = new Array();
+        var varrNew = new Array();
+        for(var i = 0; i < arr.length; i++) {
+            if($.inArray(arr[i], arrRecord) == -1) {
+                arrNew.push(arr[i]);
+                varrNew.push(varr[i]);
+            }
+        };
+        arrNew = arrRecord.concat(arrNew);
+        varrNew = varrRecord.concat(varrNew);
+        var html = '';
+        for(var i = 0; i < arrRecord.length; i++) {
+            html += '<li class="jd-li"><input type="checkbox" checked class=" checkbox-jd pull-left" value="' + varrNew[i] + '"  style="width:22px;height:30px;margin:0;" /><span class="type-name pull-left">' + arrNew[i] + '</span></li>';
+        }
+        for(var j = arrRecord.length; j < arrNew.length; j++) {
+            html += '<li class="jd-li"><input type="checkbox" class=" checkbox-jd pull-left" value="' + varrNew[j] + '"  style="width:22px;height:30px;margin:0;" /><span class="type-name pull-left">' + arrNew[j] + '</span></li>';
+        }
+        $(".jd-select-cont ul").html(html);
+    };
+
+    function searchJD(searchValue) {
+        if(searchValue == "") {
+            showAll();
+            return;
+        } else {
+            arrSearch = new Array()
+            arrSearchChecked = new Array();
+            var arrNew = new Array();
+            varrSearch = new Array()
+            varrSearchChecked = new Array();
+            var varrNew = new Array();
+            for(var i = 0; i < arr.length; i++) {
+
+                if($.inArray(arr[i], arrRecord) == -1) {
+                    arrNew.push(arr[i]);
+                    varrNew.push(varr[i]);
+                }
+
+            };
+            arrNew = arrRecord.concat(arrNew);
+            varrNew = varrRecord.concat(varrNew);
+
+            for(var i = 0; i < arrNew.length; i++) {
+                if(arrNew[i].indexOf(searchValue) != -1) {
+                    arrSearch.push(arrNew[i]);
+                    varrSearch.push(varrNew[i]);
+                    if(i < arrRecord.length) {
+                        arrSearchChecked.push(arrNew[i]);
+                        varrSearchChecked.push(varrNew[i]);
+                    }
+                }
+            }
+
+            var html = '';
+            for(var i = 0; i < arrSearchChecked.length; i++) {
+
+                html += '<li class="jd-li"><input type="checkbox" checked class=" checkbox-jd pull-left" value="' + varrSearchChecked[i] + '"  style="width:22px;height:30px;margin:0;" /><span class="type-name pull-left">' + arrSearchChecked[i] + '</span></li>';
+            }
+            for(var j = arrSearchChecked.length; j < arrSearch.length; j++) {
+
+                html += '<li class="jd-li"><input type="checkbox" class=" checkbox-jd pull-left" value="' + varrSearch[j] + '"  style="width:22px;height:30px;margin:0;" /><span class="type-name pull-left">' + arrSearch[j] + '</span></li>';
+            }
+            $(".jd-select-cont ul").html(html);
+
+        };
+    };
+    //点击选中下拉框中某一项
+    $("body").on('click', ".type-name", function() {
+
+        $(".jd-select").html($(this).html());
+        $(".jd-select-cont").hide();
+        alert($(this).prev("input").val());
+    });
+</script>
+</body>
+</html>

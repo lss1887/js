@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>select赋值</title>
+    <script src="js/jquery-3.3.1.js"></script>
+
+</head>
+<body>
+<select id="ttt">
+<!--    <option value="">全部</option>-->
+<!--    <option value="3">3</option>-->
+</select>
+<input value="赋值" type="button" onclick="gt()">
+<script type="text/javascript">
+    function gt() {
+        // $("#ttt option").remove();
+        var text = " <option value='' id='yy'>全部</option> <option value='3'>3</option>";
+        $("#ttt").append(text);
+        alert($("#yy").val());
+    }
+</script>
+</body>
+</html>

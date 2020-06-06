@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+
+<h1>hhhhhhhhhhhh</h1>
+
+
+<script type="text/javascript">
+
+    var imgBos = "[AdsMaterialBO [mId=177, openMaterialId=, materialUrl=/mp/activity/youngact/tmp_img_pic/201908/06/201565082669141.jpg, width=1024, height=673, type=0, size=95341, md5=4fbbe70e5c9fade0c87803dc33add77a, ownerId=20, extJson=, insertTime=1565082720, duration=0, updateTime=0, deleteFlag=null, materialSort=0, adId=87], " +
+        "AdsMaterialBO [mId=178, openMaterialId=, materialUrl=/mp/activity/youngact/tmp_img_pic/201908/06/201565082673355.jpg, width=1024, height=949, type=0, size=34393, md5=a78e59f7baec3a8a1d14c8b419d08b84, ownerId=20, extJson=, insertTime=1565082720, duration=0, updateTime=0, deleteFlag=null, materialSort=0, adId=87]]";
+    var dataObj=eval(imgBos);
+    console.log(dataObj);
+    // var jsonText= JSON.stringify(imgBos);
+    // var b=JSON.parse(imgBos);
+    // alert(b)
+    //  console.log(b);
+    // var a=jQuery.parseJSON(imgBos)
+   //  console.log(a);
+   // alert(a.mid);
+   //  var imgs = eval("("+imgBos+")");
+   //  console.log(imgs);
+   //  alert(imgs)
+    $.each(dataObj,function(index,item){
+alert(index)
+    alert("item.materialUrl")
+    var mid = item.mId;
+    console.log(mid);
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>排序图标</title>
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <!--使用Bootstrap的js插件，必须先调入jQuery-->
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.min.js"></script>
+
+    <!-- 包括所有bootstrap的js插件或者可以根据需要使用的js插件调用　-->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+    <style>
+        .arr {
+            width: 160px;
+        }
+
+        .arrUp {
+            width: 0;
+            height: 0;
+            border: 80px solid transparent;
+            border-bottom-color: #ccc;
+            cursor: pointer;
+        }
+
+        .arrDown {
+            width: 0;
+            height: 0;
+            border: 80px solid transparent;
+            border-top-color: #ccc;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+
+<i class="fa fa-shopping-bag" aria-hidden="true"></i>
+<i class="fa fa-shopping-bag" aria-hidden="true"></i>
+<a class="fa-sort-asc"></a>
+<script>
+    $(function () {
+        $(".arrUp").on("click", function () {
+            $(this).css("border-bottom-color", "#b2b2b2");
+            $(".arrDown").css("border-top-color", "#ccc")
+            alert(1)
+        });
+        $(".arrDown").on("click", function () {
+            $(this).css("border-top-color", "#b2b2b2")
+            $(".arrUp").css("border-bottom-color", "#ccc")
+            alert(2)
+        })
+    })
+
+</script>
+
+</body>
+</html>

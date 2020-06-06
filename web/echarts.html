@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多个label 和 事件</title>
+    <link href="css/bootstrap.css">
+    <script src="js/echarts.min.js"></script>
+    <script src="js/jquery-3.3.1.js"></script>
+<!--    <script src="/js/bootstrap.min.js"></script>-->
+</head>
+<body>
+<input id="ggggg" value="移除" type="button" onclick="fn6()">
+<table id="tableParent">
+    <tr>
+<!--        <td id="td1"> <div style="text-align: right">排期ID: 1036 广告位: 商店开屏大图 日期: 2019-06-22&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<a href="" id="compare1" onclick="ggg()">加入对比</a> &emsp;<a href="">导出</a></div><div id="main" style="width: 750px;height: 600px"  ></div></td>-->
+<!--        -->
+    </tr>
+<!--    <hr/>-->
+<!--    <tr>-->
+<!--        <td> <div id="main1" style="width: 750px;height: 600px"  ></div></td>-->
+<!--&lt;!&ndash;        <td> <div id="gg1" style="width: 750px;height: 600px"  ></div></td>&ndash;&gt;-->
+<!--    </tr>-->
+</table>
+<!--    <span id="main" style="width: 1300px;height: 600px"  ></span>-->
+<!--    <span id="main2" style="width: 900px;height: 600px" ></span>-->
+
+<script type="text/javascript">
+    // var td1="<td> <div style='text-align: right'>排期ID: 1036 广告位: 商店开屏大图 日期: 2019-06-22&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<a href='' id='compare1' onclick='ggg()'>加入对比</a> &emsp;<a href=''>导出</a></div> <div id='gg' style='width: 750px;height: 600px'  ></div></td>"
+    // $("#td1").after(td1);
+    var a=" <td id='td1'> <div style='text-align: right'>排期ID: 1036 广告位: 商店开屏大图 日期: 2019-06-22&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<a href='javascript:void(0);' id='compare1' onclick='ggg()'>加入对比</a> &emsp;<a href=''>导出</a></div><div id='main' style='width: 750px;height: 600px'  ></div></td>";
+    $("#tableParent tr").append(a);
+    var myChart = echarts.init(document.getElementById('main'));
+    // var myChart2 = echarts.init(document.getElementById('gg'));
+    // var myChart3 = echarts.init(document.getElementById('main1'));
+    // var myChart4 = echarts.init(document.getElementById('gg1'));
+    // var myChart2 = echarts.init(document.getElementById('main2'));
+    var option = {
+        dataset: {
+            source :[
+                ['广告点击量',  111,7.62],
+                ['广告曝光量',  1457,      100],
+                ['客户端尝试曝光',  1457,       4.83],
+                ['服务器请求下发广告数',  30149,       32.18],
+                ['DSP竞价成功数',  73675,       100],
+                ['DSP有效竞价数',  73675,       72.73],
+                ['  DSP竞价响应数',  101294,       99.24],
+                ['  ADX发起竞价请求数' ,  102074,       204.15],
+                ['  排期预定量' ,  50000]
+            ]
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'shadow'
+            },
+            formatter:function(params){
+                if (params[0].axisValue.search("ADX发起竞价请求数") != -1){
+                    return '请求数异常可能原因：①产品下架（排期/创意审核不通过）；<br/>②请求数已超过推送比； ③广告位/渠道下发数量已超过整体下发倍率';
+                }
+                if (params[0].axisValue.search("DSP竞价成功数") != -1){
+                    return '竞价成功数异常可能原因：①数据记录有误”';
+                }
+
+            },
+
+        },
+        yAxis: {
+            splitLine:{
+                show:false
+            },
+            type: 'category'
+        },
+        xAxis: {
+            splitLine:{
+                show:false
+            },
+            boundaryGap: [0, 0.01]
+        },
+        grid: {
+            left: '1%',
+            right: '5%',
+            bottom: '1%',
+            top:'3%',
+            containLabel: true
+        },
+        graphic: [
+            {
+                type: 'group',
+                right: '1%',
+                bottom: '10%',
+                // top: 'center',
+                children: [
+                    {
+                        type: 'rect',
+                        // z: 100,
+                        left: 'center',
+                        top: 'middle',
+                        shape: {
+                            width: 150,
+                            height: 100
+                        },
+                        style: {
+                            fill: '#fff',
+                            // stroke: '#555',
+                            lineWidth: 2,
+                            shadowBlur: 8,
+                            shadowOffsetX: 3,
+                            shadowOffsetY: 3,
+                            shadowColor: 'rgba(0,0,0,0.3)'
+                        }
+                    },
+                    {
+                        type: 'text',
+                        name:'hhh',
+                        // z: 100,
+                        left: 'center',
+                        top: 'middle',
+                        bottom:'10%',
+                        style: {
+                            fill: '#333',
+                            text: [
+                                '推送比：2',
+                                '完成率：2.91%',
+                                '点击率：7.62%',
+                                '参竞率：99.24%',
+                                '曝光成功率：1.98%'
+                            ].join('\n'),
+                            font: '14px Microsoft'
+                        }
+                    }
+                ]
+            }
+        ],
+        series: [
+            {
+                type: 'bar',
+                stack: 'samestack',
+                label: {
+                    show: true,
+                    distance: -15,
+                    position: 'insideRight',
+                    formatter: '{hh|{@[1]}}',
+                    rich: {
+                        value: {
+                            lineHeight: 30,
+                            align: 'center'
+                        },
+                        hh: {
+                            color: '#4F4F4F',
+                            textBorderColor: 'white',
+                            width: 1,
+                            fontWeight: 500,
+                            font: '1px Microsoft YaHei'
+                        }
+                    },
+                }
+            },
+            {
+                type: 'bar',
+                stack: 'samestack',
+                label: {
+                    show: true,
+                    position: 'insideRight',
+                    distance: -70,
+                    formatter: '{percentage|{@[2]}%}',
+                    rich: {
+                        value: {
+                            lineHeight: 30,
+                            align: 'center'
+                        },
+                        percentage: {
+                            color: '#4F4F4F',
+                            textBorderColor: 'white',
+                            width: 1,
+                            fontWeight: 500,
+                        }
+                    },
+
+                }
+            }
+
+        ]
+    };
+    myChart.setOption(option);
+    myChart.on('click', function (params) {
+        console.log(params);
+    });
+    function ggg() {
+        $("#compare1").html('移除对比');
+        $("#compare1").attr('onclick','ttt()');
+    }
+    // //     if (params.color === 'black') {
+    // //         window.open('https://www.baidu.com/s?wd=' + encodeURIComponent(params.componentType));
+    // //         if (params.seriesIndex === 2){
+    // //             alert(1);
+    // //         }
+    // //
+    // //     }
+    // // // });
+    // myChart.on('mouseover','series',function () {
+    //     alert(666)
+    // })
+    function fn6() {
+        $("#td1").remove();
+    }
+</script>
+</body>
+</html>

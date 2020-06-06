@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>日期合法性</title>
+    <script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+
+<script>
+    $(function () {
+        checkDate("2019-4-01");
+    })
+    function checkDate(strDate) {
+        var dat = new Date(strDate);
+        var arrDate = strDate.split("-");
+        if (dat == "Invalid Date") {
+            console.log("Invalid Date");
+        } else {
+            if (parseInt(dat.getDate()) === parseInt(arrDate[2])) {
+                console.log('OK');
+            } else {
+                console.log("Invalid Date");
+            }
+        }
+    }
+</script>
+</body>
+</html>

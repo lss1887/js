@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js 中 map </title>
+    <script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<script>
+    $(function () {
+
+        var arr1 = [1,2,3]
+        var arr2 = [6,2,3];
+        var map = getMap(arr1,arr2);
+      alert(  map.get("arr1"));
+      alert(  map.get("arr2"));
+
+    })
+    function getMap(arr1,arr2) {
+        var map = new Map();
+        map.set("arr1",arr1);
+        map.set("arr2",arr2);
+        return map;
+    }
+</script>
+
+</body>
+</html>

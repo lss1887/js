@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>table</title>
+    <script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<div id="yy">
+    <table id="rr">
+        <thead>
+        <tr>
+            <td>1</td>
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+<script type="text/javascript">
+    $(function () {
+        $("#yy tbody").html("<tr><td>dd</td></tr>")
+        $("#rr").after("<input type='button'value='eee'/>")
+        $("#yy").after("gggggggggg")
+    })
+</script>
+</body>
+</html>

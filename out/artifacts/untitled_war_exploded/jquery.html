@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery</title>
+
+</head>
+<script src="js/jquery-3.3.1.js"></script>
+
+<script>
+    window.onload=function () {
+        //根据id获取div标签
+        //     var  element=${"#d1"};
+        // var element = $("#d1");
+        var element = document.getElementById("d1");
+        // 获取标签体的内容
+        var content=element.innerHTML;
+        alert(content)
+    }
+</script>
+<body>
+<div id="d1">你好世界</div>
+<div id="d2">hello world</div>
+
+</body>
+</html>

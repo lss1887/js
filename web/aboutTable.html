@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格</title>
+    <script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<input type="button" value="append" onclick="gn1()">
+<hr>
+<table id="table">
+    <tr id="tr1">
+        <td>3</td>
+        <td>4</td>
+    </tr>
+</table>
+
+<script type="text/javascript">
+    function gn1() {
+        // var a =" <tr> <td>1</td> <td>2</td> </tr>";
+        // var c =" <tr> <td>7</td> <td>8</td> </tr>";
+        // $("#table").append(a);
+        // $("#table").append(c);
+        var a ="<td>9</td>"
+$("#tr1").append(a)
+    }
+</script>
+
+</body>
+</html>

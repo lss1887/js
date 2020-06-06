@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<textarea rows="8" cols=""80 id="dddd"></textarea>
+
+<input value="getValue" type="button" onclick="getValue()">
+<script>
+    function getValue() {
+        var value = $("#dddd").val();
+        var aa = JSON.stringify(value);
+        console.log(aa);
+        var dd = value.replace(/\n/g,',');
+        console.log(dd);
+        var cc = dd.split(",");
+        var array = [];
+        $.each(cc,function (index,entity) {
+            var item = entity.replace(/\s+/g, "");
+            if(item != ""&& item != null){
+                array.push(item);
+            }
+        })
+        var addd = array.join(",")
+        console.log(addd);
+    }
+</script>
+</body>
+</html>

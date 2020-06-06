@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery自定义下拉分类多选代码 - 站长素材</title>
+
+    <link href="css/fSelect.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+<div class="container">
+    <select class="demo" multiple="multiple">
+            <option value="cp">C++</option>
+            <option value="cs">C#</option>
+            <option value="oc">Object C</option>
+            <option value="c">C</option>
+    </select>
+</div>
+
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/fSelect.js"></script>
+<script>
+    $(function() {
+        $('.demo').fSelect();
+    });
+</script>
+</body>
+</html>

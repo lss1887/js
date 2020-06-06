@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组指定位置添加元素</title>
+    <script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+
+<script>
+    var array= new Array(31).fill(0);
+    console.log(array);
+    //在指定位置添加元素,第一个参数指定位置,第二个参数指定要删除的元素,如果为0,则追加
+    array.splice(0, 1, "three");
+    array.splice(2, 1, "three2");
+    console.log(array);
+</script>
+</body>
+</html>

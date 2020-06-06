@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多选</title>
+    <style type="text/css">
+    </style>
+    <link href="js/select2.css" rel="stylesheet">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/select2.js"></script>
+</head>
+<body>
+<select class="js-example-basic-multiple" name="states[]" multiple="multiple" id="tt" style="width: auto;float:left">
+    <option value="AL">Alabama</option>
+    <option value="WY">Wyoming</option>
+    <option value="WY">l</option>
+    <option value="WY">s</option>
+    <option value="Ws">s</option>
+</select>
+
+<script>
+    $( function () {
+        $('.js-example-basic-multiple').select2();
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下拉多选框</title>
+    <link href="js/multiple-select.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <script src="js/multiple-select.js"></script>
+    <script src="js/multiple-select-zh-CN.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<select id="tt" multiple="multiple" >
+    　　<option value='1'> 选项一 </option>
+    　　<option value='2'> 选项二 </option>
+    　　<option value='3'> 选项三</option>
+</select>
+<script>
+    // 初始化
+    $("#tt").multipleSelect({
+        placeholder: "请选择",
+        selectAllText:'全选',
+        allSelected:'选择全部'
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>getMonthBetween 月份区间</title>
+    <script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+
+<script>
+    $(function () {
+        // alert(getMonthBetween("2020-01","2020-09"));
+        // var result = getMonthBetween("2020-01","2020-09");
+        // alert(result.length)
+        getValue();
+    })
+    function getMonthBetween(start,end){
+        var result = [];
+
+        var s = start.split("-");
+        var e = end.split("-");
+
+        var min = new Date();
+        var max = new Date();
+
+        min.setFullYear(s[0],s[1]);
+
+        max.setFullYear(e[0],e[1]);
+
+        var curr = min;
+
+        while(curr <= max){
+            var month = curr.getMonth();
+
+            result.push(curr.getFullYear()+"-"+(month<10?("0"+month):month));
+
+            curr.setMonth(month+1);
+
+        }
+        return result;
+    }  
+    function getValue() {
+        var a = "2020-04-14 - 2020-07-14";
+        var b = a.substr(0,10);
+        var c = a.substr(13,10);
+        console.log("_________b:"+b);
+        console.log("_________c:"+c);
+        // var result = getMonthBetween(b,c);
+        // console.log(result);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<!--<input type="button" onclick="fn1(1)">-->
+<!--<input type="text" id="tt">-->
+<!--<input type="button" onclick="fn2()">-->
+<!--<div style="color: #272727">333</div>-->
+<div>
+    <table width="100%">
+        <tr>
+            <td id="ttt" value="1">1</td>
+            <td>2</td>
+            <td>3</td>
+        </tr>
+    </table>
+</div>
+<hr/>
+<script type="text/javascript">
+
+    $(function () {
+        alert( $("#ttt").val());
+    })
+function fn1(obj) {
+    $("#tt").val(0)
+    alert(obj)
+    alert(typeof obj)
+
+}
+function fn2() {
+    alert(typeof   $("#tt").val("") )
+}
+</script>
+</body>
+</html>

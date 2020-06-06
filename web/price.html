@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片</title>
+<!--    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="css/bootstrap.css">
+<!--    <script type="text/javascript" src="/jquery-1.11.3.min.js"></script>-->
+    <script src="js/jquery-3.3.1.js"></script>
+<!--    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>-->
+    <script src="js/bootstrap.min.js"></script>
+    <!--S   QLQ预览照片相关css     -->
+    <style>
+        .imageDiv{
+            float: left;
+            margin-left: 10px;
+        }
+        .deleteImgA{
+            display: block;text-align: center
+        }
+        .priImg{
+            height:140px;
+            width:160px;
+        }
+    </style>
+
+
+
+    <!--S   QLQ预览照片相关css     -->
+</head>
+<body>
+
+<div id="imgBigDiv">
+    <div class="box-body planePicture pictureDiv" id="pingmianDiv" style="margin-top:20px;">
+        <!-- 存放之前已经选好的图片 -->
+        <div id="pingmianPriviousDiv">
+            <div class="imageDiv">
+                <img src="http://localhost/picture/0b6c3372f3fc4ebb884eb228f5d46364.png" class="priImg">
+                <a href="javascript:void(0)" class="deleteImgA">删除</a>
+            </div >           <div class="imageDiv">
+            <img src="http://localhost/picture/0b06d1c5c12d4ae7aa171ed4c3fd8b09.png" class="priImg">
+            <a href="javascript:void(0)" class="deleteImgA">删除</a>
+        </div >
+            <div class="imageDiv">
+                <img src="http://localhost/picture/1a3e79a019844d5dab801005b9294896.png" class="priImg">
+                <a href="javascript:void(0)" class="deleteImgA">删除</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- S   预览照片模态框-->
+<div class="modal fade" id="imgModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="box-body">
+                      <span style="">
+                          <img alt="" src="image/left.jpg" style="width:40px;height:60px;margin-bottom:40%" title="点击查看上一张" onclick="lastImg()">
+                      </span>
+                <span>
+                         <img id="dynamicImage" src=""  style="width:83%;height:83%">
+                     </span>
+                <span style="">
+                         <img alt="" src="image/right.jpg" style="width:40px;height:60px;margin-bottom:40%" title="点击查看下一张" onclick="nextImg()">
+                       </span>
+            </div><!-- /.box-body -->
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal -->
+</div>
+<!-- E   预览照片模态框-->
+
+
+
+<script>
+    //以前图片的点击事件:
+    $(function () {
+        //事件委托
+        $('body').on('click','.priImg', function () {
+            var src = $(this).prop("src");
+            $("#dynamicImage").prop("src",src);
+            $("#imgModal").modal("show");
+        });
+    })
+
+    /************  S   预览图片的上一张下一张*******************/
+    function lastImg(){
+        var src = $("#dynamicImage").attr("src");
+        var imgName = src.toString().substring(src.length-36);//获取图片名字
+        var imgParent = $("#imgBigDiv").find("[src$='"+imgName+"']").parent();//获取到class为imageDiv的div
+        var lastImageDiv = imgParent.prev("div");
+        if(lastImageDiv.length == 0){
+            alert("已经是第一张了");
+        }else{
+            $("#dynamicImage").prop("src",lastImageDiv.children("img").prop("src"));
+        }
+    }
+    function nextImg(){
+        var src = $("#dynamicImage").attr("src");
+        var imgName = src.toString().substring(src.length-36);//获取图片名字
+        var imgParent = $("#imgBigDiv").find("[src$='"+imgName+"']").parent();//获取到class为imageDiv的div
+        var lastImageDiv = imgParent.next("div");
+        if(lastImageDiv.length == 0){
+            alert("已经是最后一张了");
+        }else{
+            $("#dynamicImage").prop("src",lastImageDiv.children("img").prop("src"));
+        }
+    }
+    /************  E   预览图片的上一张下一张*******************/
+</script>
+</body>
+</html>

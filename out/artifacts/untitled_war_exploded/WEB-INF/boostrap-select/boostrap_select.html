@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>boostrap_select_demo</title>
+    <link href="../../css/bootstrap.css" rel="stylesheet">
+    <link href="../../js/bootstrap-select.css" rel="stylesheet">
+    <script src="../../js/jquery-3.3.1.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/bootstrap-select.js"></script>
+    <script src="../../js/defaults-zh_CN.js"></script>
+</head>
+<body>
+<select class="selectpicker"  multiple data-live-search="true">
+
+        <option value="1">广州市</option>
+        <option value="2">深圳市</option>
+        <option value="3">珠海市</option>
+    <option value="2">深圳</option>
+    <option value="5">珠海</option>
+
+</select>
+<input type="button" onclick="ddd()" value="初始状态">
+
+<script>
+    $(function () {
+        $('.selectpicker').selectpicker('val', [1,2]);
+    })
+    function ddd() {
+        $(".selectpicker").selectpicker('val',['noneSelectedText']);
+        $(".selectpicker").selectpicker('refresh');
+    }
+</script>
+
+</body>
+</html>

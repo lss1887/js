@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex</title>
+    <style>
+        #container{
+            display: flex;
+            flex-direction: column;
+        }
+        div>div:first-child{
+            flex-basis: auto;
+            height: 50px;
+        }
+        div>div:nth-child(2){
+            /*flex-basis设置的是元素在主轴上的初始尺寸，所谓的初始尺寸就是元素在flex-grow和flex-shrink生效前的尺寸。*/
+            flex-basis: 60px;
+            width: 100px;
+
+        }
+
+    </style>
+</head>
+<body>
+
+<div  id="container">
+    <div>111</div>
+    <div>222</div>
+</div>
+
+</body>
+</html>

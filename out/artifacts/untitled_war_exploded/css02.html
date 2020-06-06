@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!--引入外部样式-->
+    <!--方式一：使用link标签-->
+    <!--<link type="text/css" rel="stylesheet" href="css/out.css"/>-->
+    <!--方式二：import指令导入。其中： url函数，指定文件名-->
+<style type="text/css">
+    @import url("css/out.css");
+</style>
+<style type="text/css">
+    p {
+        color: gray;
+    }
+    #three {
+        font-size: 60px;
+    }
+    .hello {
+        font-size: 50px;
+    }
+    /*标签选择器*/
+    div {
+        font-size: 40px;
+    }
+    /*类选择器*/
+    .one {
+        color: blue;
+    }
+    /*id选择器*/
+    #two {
+        font-family: 楷体;
+    }
+</style>
+</head>
+<body>
+<div style="color: green">世界多么美好</div>
+<div >世界多么美好</div>
+<p>今天空气有雾霾</p>
+<p style="color: red">今天空气不错</p>
+<h2>我是标题</h2>
+<h2 id="two">我是标题</h2>
+<h1 class="one">我是一类</h1>
+<div class="one">我也是一类</div>
+<div id="three" class="hello">
+    我三个都有
+</div>
+</body>
+</html>
+</body>
+</html>

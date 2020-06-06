@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多张图片上传</title>
+
+    <script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<div>
+    <label>图片</label>
+    <input type="file" id="picture" multiple onchange="fn1()"/>
+</div>
+<input id="previewImg" type="hidden"/>
+
+<script type="text/javascript">
+    // $('#picture').change(function () {
+    //
+    // })
+    function fn1(){
+        var imgFiles = $("#picture")[0].files
+           for (i=0;i<imgFiles.length;i++) {
+              var index= imgFiles[i].name.substr(imgFiles[i].name.lastIndexOf(".")).toLowerCase();
+               console.log(index);
+               alert(index)
+           }
+        console.log(typeof imgFiles)
+        console.log(imgFiles);
+        alert(imgFiles)
+    }
+    // $('#picture').on('change', function(){
+    //     var imgFiles = $(this)[0].files
+    //     console.log(imgFiles)
+    //     for (i=0;i<imgFiles.length;i++) {
+    //         filePath = imgFiles[i].name
+    //         alert(filePath)
+    //         fileFormat = filePath.split('.')[1].toLowerCase()
+    //         src = window.URL.createObjectURL(imgFiles[i])
+    //         if (!fileFormat.match(/png|jpg|jpeg/)) {
+    //             alert('上传错误,文件格式必须为：png/jpg/jpeg')
+    //             return
+    //         }
+    //         var img = $("<img></img>").attr({
+    //                 "src": src,
+    //                 "width": "200px",
+    //                 "height": "200px"
+    //             }
+    //         );
+    //         $("#previewImg").after(img);
+    //     }
+    // })
+</script>
+
+</body>
+</html>

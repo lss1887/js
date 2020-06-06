@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>去除空格</title>
+    <script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<input type="button" onclick="trim()">222
+<script type="text/javascript">
+    function trim(str) {
+        var str ='     ssss    '
+        alert(str.length)
+        var a=str.replace(/(^\s*)|(\s*$)/g, "");
+        alert(a.length);
+    }
+
+</script>
+
+</body>
+</html>

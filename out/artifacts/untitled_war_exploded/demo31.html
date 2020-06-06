@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+
+<div id="tt" >方法</div>
+<input type="button" onclick="gn1()" value="111">
+<input type="button" onclick="gn2()" value="222">
+<input type="button" onclick="gn3()" value="333">
+<input type="button" onclick="gn4()" value="444">
+<script type="text/javascript">
+    function gn1() {
+        $("#tt").after("<div id='dd'>ddddd</div>");
+    }
+    function gn2() {
+        $("#dd").remove();
+    }
+    function gn3() {
+        $("#tt").attr("style","display:none")
+    }
+    function gn4() {
+        $("#tt").removeAttr("style");
+    }
+</script>
+</body>
+</html>
