@@ -1,8 +1,7 @@
 package com.oppo;
 
-import java.text.DecimalFormat;
+public class ComparableDemo {
 
-public class Demo39 {
     public static void main(String[] args) {
 
     }

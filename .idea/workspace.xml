@@ -6,7 +6,34 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0e23b82d-6d5d-454e-9dbe-f719aa0d6202" name="Default Changelist" comment="" />
+    <list default="true" id="0e23b82d-6d5d-454e-9dbe-f719aa0d6202" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/oppo/ComparableDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/oppo/Demo200.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/oppo/domain/ListFirstElement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/bootstrapSwitch.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/breenoTable.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/css/bootstrap-switch.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/demo300.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/img/Snipaste_2020-07-20_17-00-12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/js/bootstrap-switch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/limit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/nextMonth.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/posChannel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/switch.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled/com/oppo/Demo02.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled/com/oppo/Demo02.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled/com/oppo/domain/Demo59.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled/com/oppo/domain/Demo59.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/untitled/com/oppo/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/untitled/com/oppo/domain/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/oppo/Demo02.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oppo/Demo02.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/oppo/Demo39.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oppo/Demo39.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/oppo/domain/Demo59.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oppo/domain/Demo59.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/oppo/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/oppo/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/canvas画布.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/canvas.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/dateTimePicker.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/dateTimePicker.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/getAllDate.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/getAllDate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/select01.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/select01.html" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +70,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -51,8 +81,12 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectId" id="1WBywVpAI2bTc6YRUt6Sf5VNzxD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563716914013" />
@@ -68,21 +102,21 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15391305" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator.DESKTOP-VA9445K\Desktop\untitled\web\js" />
+      <recent name="C:\Users\Administrator.DESKTOP-VA9445K\Desktop\untitled\web\css" />
+      <recent name="C:\Users\Administrator.DESKTOP-VA9445K\Desktop\untitled\web\img" />
+      <recent name="C:\Users\Administrator.DESKTOP-VA9445K\Desktop\untitled\web" />
+      <recent name="C:\Users\Administrator.DESKTOP-VA9445K\Desktop\untitled\web\boostrap-select" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator.DESKTOP-VA9445K\Desktop\untitled\web" />
       <recent name="C:\Users\Administrator.DESKTOP-VA9445K\Desktop\untitled\web\img" />
       <recent name="C:\Users\Administrator.DESKTOP-VA9445K\Desktop\untitled\web\css" />
       <recent name="C:\Users\CELTICS\Desktop\untitled\web\WEB-INF" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Administrator.DESKTOP-VA9445K\Desktop\untitled\web\js" />
-      <recent name="C:\Users\Administrator.DESKTOP-VA9445K\Desktop\untitled\web\css" />
-      <recent name="C:\Users\Administrator.DESKTOP-VA9445K\Desktop\untitled\web" />
-      <recent name="C:\Users\Administrator.DESKTOP-VA9445K\Desktop\untitled\web\img" />
-      <recent name="C:\Users\Administrator.DESKTOP-VA9445K\Desktop\untitled\web\boostrap-select" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -97,20 +131,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Demo31">
-    <configuration name="BubbleSortMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.oppo.demo.BubbleSortMain" />
-      <module name="untitled" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.oppo.demo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Demo59">
     <configuration name="Demo02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.oppo.Demo02" />
       <module name="untitled" />
@@ -137,15 +158,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Demo100" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Demo100" />
-      <module name="untitled" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Demo31" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.oppo.Demo31" />
+    <configuration name="Demo200" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.oppo.Demo200" />
       <module name="untitled" />
       <extension name="coverage">
         <pattern>
@@ -157,8 +171,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReplaceTimeStamp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.oppo.domain.ReplaceTimeStamp" />
+    <configuration name="Demo39" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.oppo.Demo39" />
+      <module name="untitled" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.oppo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Demo59" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.oppo.domain.Demo59" />
+      <module name="untitled" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.oppo.domain.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ListFirstElement" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.oppo.domain.ListFirstElement" />
       <module name="untitled" />
       <extension name="coverage">
         <pattern>
@@ -247,20 +287,20 @@
     </configuration>
     <list>
       <item itemvalue="Application.Demo08" />
-      <item itemvalue="Application.Demo100" />
-      <item itemvalue="Application.ReplaceTimeStamp" />
       <item itemvalue="Application.Demo02" />
-      <item itemvalue="Application.BubbleSortMain" />
-      <item itemvalue="Application.Demo31" />
+      <item itemvalue="Application.Demo200" />
+      <item itemvalue="Application.Demo39" />
+      <item itemvalue="Application.ListFirstElement" />
+      <item itemvalue="Application.Demo59" />
       <item itemvalue="Tomcat Server.Tomcat 8.5.32" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Demo31" />
-        <item itemvalue="Application.BubbleSortMain" />
+        <item itemvalue="Application.Demo59" />
+        <item itemvalue="Application.ListFirstElement" />
+        <item itemvalue="Application.Demo39" />
+        <item itemvalue="Application.Demo200" />
         <item itemvalue="Application.Demo02" />
-        <item itemvalue="Application.Demo100" />
-        <item itemvalue="Application.ReplaceTimeStamp" />
       </list>
     </recent_temporary>
   </component>
@@ -335,12 +375,29 @@
       <workItem from="1588042283636" duration="17571000" />
       <workItem from="1589265222668" duration="6350000" />
       <workItem from="1589800147126" duration="11427000" />
-      <workItem from="1591171694522" duration="18905000" />
+      <workItem from="1591171694522" duration="47927000" />
+      <workItem from="1591607928428" duration="559000" />
+      <workItem from="1591864726943" duration="11931000" />
+      <workItem from="1593312878828" duration="33470000" />
+      <workItem from="1595231503682" duration="24703000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -369,12 +426,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/web/method.html</url>
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-field">
-          <url>file://$PROJECT_DIR$/src/com/oppo/Demo39.java</url>
-          <line>2</line>
-          <properties field="x" class="com.oppo.HasStatic" />
-          <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/oppo/domain/HasStatic.java</url>

@@ -25,7 +25,9 @@ public class Demo02 {
         System.out.println(format.format(doubleValue));
         System.out.println(format.format(Double.valueOf((12580000 / 100) + "") / Double.valueOf(2621 + "")));
 
-
+        List<Address> list = new ArrayList<>();
+        System.out.println(list);
+        System.out.println(list.size());
     }
 
 }

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <style>
+        table tr td{
+            text-align: center;
+        }
+    </style>
+</head>
+<body style="margin: 100px">
+
+<div class="col-sm-4">
+<input value="查询总库存" type="button" style="background-color: #FF9900;-webkit-text-fill-color: white;width: 200px;height: 50px;" onclick="querySurplusOfStock(1)"> &emsp;&emsp;&emsp;&emsp;
+<span id="stockSpan" style="color: #33A7D8;font-size: 25px">预估库存: 0CPM</span>
+</div>
+<div class="col-sm-6" >
+<table border="1" cellspacing="0"  style="height: 100px; margin-top: -30px;width: 1000px">
+    <tr>
+        <td width="200px"></td>
+        <td width="200px">广告位1</td>
+        <td width="200px">广告位2</td>
+        <td width="200px">广告位3</td>
+        <td width="200px">汇总</td>
+    </tr>
+    <tr >
+        <td>预估库存</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr >
+        <td>覆盖人群</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+    <div id="dd"></div>
+</div>
+<script>
+    function querySurplusOfStock(obj) {
+        var a = "";
+        a + "dddddd";
+        $("#dd").append(a);
+    }
+</script>
+</body>
+</html>

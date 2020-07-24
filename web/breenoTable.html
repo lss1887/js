@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.3.1.js"></script>
+</head>
+<style>
+    .titleName{
+        background-color: #F2F2F2;
+        width: 200px;
+        height: 40px;
+        text-align: center;
+    }
+   .breenoTable{
+       border:1px solid #F2F2F2
+   }
+    .breenoTable tr td:first-child{
+        background-color: #F2F2F2;
+        width: 200px;
+        height: 40px;
+        text-align: center;
+    }
+    .breenoTable tr td:nth-child(2){
+        width: 1000px;
+        height: 40px;
+        text-align: center;
+    }
+
+</style>
+<body>
+
+<table class="breenoTable" border="1" cellspacing="0" cellpadding="0">
+    <tr>
+        <td >卡片消息名称</td>
+        <td>直播预约push</td>
+    </tr>
+    <tr>
+        <td class="titleName">卡片消息ID</td>
+        <td class="contentDetail">直播预约push</td>
+    </tr>
+    <tr>
+        <td class="titleName">创建时间</td>
+        <td class="contentDetail">2020-6-10</td>
+    </tr>
+    <tr>
+        <td class="titleName">关联创意数</td>
+        <td class="contentDetail">5</td>
+    </tr>
+    <tr>
+        <td class="titleName">行业</td>
+        <td class="contentDetail">电商</td>
+    </tr>
+    <tr>
+        <td class="titleName">类目</td>
+        <td class="contentDetail">直播</td>
+    </tr>
+    <tr>
+        <td class="titleName">卡片副标题</td>
+        <td class="contentDetail">您的发布会，即将开始</td>
+    </tr>
+    <tr>
+        <td class="titleName">直播名称</td>
+        <td class="contentDetail">OPPO R4线上发布会</td>
+    </tr>
+    <tr>
+        <td class="titleName">直播时间</td>
+        <td class="contentDetail">2020-6-10 16:16:18</td>
+    </tr>
+    <tr>
+        <td class="titleName">按钮文案</td>
+        <td class="contentDetail">立即观看</td>
+    </tr>
+    <tr>
+        <td class="titleName">icon</td>
+        <td class="contentDetail"><img src="./img/Snipaste_2020-07-20_17-00-12.png" style="margin-top: 20px"><a href="javaScript:void(0);" style="margin-left: 20px">查看</a></td>
+    </tr>
+    <tr>
+        <td class="titleName">展示图片</td>
+        <td class="contentDetail"><img src="./img/Snipaste_2020-07-20_17-00-12.png" style="margin-top: 20px"><a href="javaScript:void(0);" style="margin-left: 20px">查看</a></td>
+    </tr>
+</table>
+<br/>
+<input type="button" style="background-color: #999999;-webkit-text-fill-color: white" value="完成">
+
+
+<script>
+
+
+    $(function () {
+
+        var a = "<table class=\"breenoTable\" border=\"1\" cellspacing=\"0\" cellpadding=\"0\">\n" +
+            "    <tr>\n" +
+            "        <td >卡片消息名称</td>\n" +
+            "        <td>直播预约push</td>\n" +
+            "    </tr>\n" +
+            "    <tr>\n" +
+            "        <td class=\"titleName\">卡片消息ID</td>\n" +
+            "        <td class=\"contentDetail\">直播预约push</td>\n" +
+            "    </tr>\n" +
+            "    <tr>\n" +
+            "        <td class=\"titleName\">创建时间</td>\n" +
+            "        <td class=\"contentDetail\">2020-6-10</td>\n" +
+            "    </tr>\n" +
+            "    <tr>\n" +
+            "        <td class=\"titleName\">关联创意数</td>\n" +
+            "        <td class=\"contentDetail\">5</td>\n" +
+            "    </tr>\n" +
+            "    <tr>\n" +
+            "        <td class=\"titleName\">行业</td>\n" +
+            "        <td class=\"contentDetail\">电商</td>\n" +
+            "    </tr>\n" +
+            "    <tr>\n" +
+            "        <td class=\"titleName\">类目</td>\n" +
+            "        <td class=\"contentDetail\">直播</td>\n" +
+            "    </tr>\n" +
+            "    <tr>\n" +
+            "        <td class=\"titleName\">卡片副标题</td>\n" +
+            "        <td class=\"contentDetail\">您的发布会，即将开始</td>\n" +
+            "    </tr>\n" +
+            "    <tr>\n" +
+            "        <td class=\"titleName\">直播名称</td>\n" +
+            "        <td class=\"contentDetail\">OPPO R4线上发布会</td>\n" +
+            "    </tr>\n" +
+            "    <tr>\n" +
+            "        <td class=\"titleName\">直播时间</td>\n" +
+            "        <td class=\"contentDetail\">2020-6-10 16:16:18</td>\n" +
+            "    </tr>\n" +
+            "    <tr>\n" +
+            "        <td class=\"titleName\">按钮文案</td>\n" +
+            "        <td class=\"contentDetail\">立即观看</td>\n" +
+            "    </tr>\n" +
+            "    <tr>\n" +
+            "        <td class=\"titleName\">icon</td>\n" +
+            "        <td class=\"contentDetail\"><img src=\"./img/Snipaste_2020-07-20_17-00-12.png\" style=\"margin-top: 20px\"><a href=\"javaScript:void(0);\" style=\"margin-left: 20px\">查看</a></td>\n" +
+            "    </tr>\n" +
+            "    <tr>\n" +
+            "        <td class=\"titleName\">展示图片</td>\n" +
+            "        <td class=\"contentDetail\"><img src=\"./img/Snipaste_2020-07-20_17-00-12.png\" style=\"margin-top: 20px\"><a href=\"javaScript:void(0);\" style=\"margin-left: 20px\">查看</a></td>\n" +
+            "    </tr>\n" +
+            "</table>";
+        console.log(getdate());
+    });
+    function getdate() {
+        var now = new Date(),
+            y = now.getFullYear(),
+            m = now.getMonth() + 1,
+            d = now.getDate();
+        return y + "-" + (m < 10 ? "0" + m : m) + "-" + (d < 10 ? "0" + d : d) + " " + now.toTimeString().substr(0, 8);
+    }
+</script>
+</body>
+</html>

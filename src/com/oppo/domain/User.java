@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Created by linshisheng on 2019/07/18.
  */
-public class User {
+public class User implements  Comparable<User> {
     private Integer id;
     private String name;
     private Integer age;
@@ -74,4 +74,8 @@ public class User {
                 '}';
     }
 
+    @Override
+    public int compareTo(User u) {
+        return this.getAge() - u.getAge();
+    }
 }

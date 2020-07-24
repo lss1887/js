@@ -12,25 +12,82 @@
     <link href="css/bootstrap.css" rel="stylesheet">
     <script src="js/bootstrap.min.js"></script>
     <style type="text/css">
-        .demo{
-            height: 100px;
-        }
     </style>
 </head>
 <body>
-<select class="demo selectpicker" multiple="multiple">
-    <optgroup label="Languages">
+
+<select class="demo selectpicker" multiple="multiple" id="gggg">
+<!--    <optgroup label="Languages">-->
         <option value="cp">C++</option>
         <option value="cs">C#</option>
         <option value="oc">Object C</option>
         <option value="c">C</option>
-    </optgroup>
-    <optgroup label="Scripts ">
-        <option value="js">JavaScript</option>
-        <option value="php">PHP</option>
-        <option value="asp">ASP</option>
-        <option value="jsp">JSP</option>
-    </optgroup>
+    <option value="cp">C++</option>
+    <option value="cs">C#</option>
+    <option value="oc">Object C</option>
+    <option value="c">C</option>
+    <option value="cp">C++</option>
+    <option value="cs">C#</option>
+    <option value="oc">Object C</option>
+    <option value="c">C</option>
+<!--    </optgroup>-->
+<!--    <optgroup label="Scripts ">-->
+<!--        <option value="js">JavaScript</option>-->
+<!--        <option value="php">PHP</option>-->
+<!--        <option value="asp">ASP</option>-->
+<!--        <option value="jsp">JSP</option>-->
+<!--    </optgroup>-->
 </select>
+
+<input type="button" value="gg1"  id ="lflf" class="ud" onclick="ddf(this)">
+<input type="button" value="gg2" id="1" onclick="dd1()">
+<input type="button" value="gg3"  id="3" onclick="dd2()">
+
+
+<div id="allPreOrder">
+
+</div>
+<script>
+    $(function () {
+
+       // $(".selectpicker").selectpicker('destroy');
+
+
+        $(".demo").selectpicker(
+            "val","cp"
+        )
+
+
+    });
+    function ddf(obj) {
+        $("input").each(function () {
+            console.log("==="+ this.id);
+        });
+
+        // console.log("==="+ $(obj).attr("id"));
+        $(".selectpicker").html("");
+        var a = "<option>全部</option>";
+        $(".selectpicker").html(a);
+        // $(".selectpicker").selectpicker({
+        //     "width":888
+        // })
+        $(".selectpicker").selectpicker('refresh');
+        $(".selectpicker").selectpicker('render');
+    }
+    function dd1() {
+        var a = $('#gggg').find('option:selected');
+        console.log("=========="+a);
+        var checkText = [];
+        for (var i = 0; i <a.length ; i++) {
+            checkText.push(a[i].textContent);
+        }
+        console.log("checkText == > "+checkText.join(','))
+    }
+    function dd2() {
+        // $("#allPreOrder").html("");
+        $("#allPreOrder").append("<span>架设计三等奖</span>");
+
+    }
+</script>
 </body>
 </html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>开关</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-switch.css">
+    <script src="js/jquery-3.3.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-switch.js"></script>
+</head>
+<body>
+
+<input name="status" type="checkbox" id="absolutePriority">
+<input type="button" id="satus2" value="3333">
+
+
+
+<script>
+    $(function () {
+        $("[name= 'status']").bootstrapSwitch("state",true);
+        $("#satus").bootstrapSwitch("onSwitchChange",function(event,state){
+            if(state==true){
+                console.log("开启");
+                if(confirm("是否开启绝对优先开关")){
+                    $("[name= 'status']").bootstrapSwitch("state",true);
+                }else{
+                    $("[name= 'status']").bootstrapSwitch("state",false);
+                };
+            }else{
+                console.log("关闭");
+            }
+        });
+    });
+
+    $("#satus2").click(function () {
+        console.log("11:===>"+$("#satus").prop("checked"))
+    })
+</script>
+
+</body>
+</html>
