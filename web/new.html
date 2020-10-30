@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新的窗口</title>
+    <script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<img src="" style="width: 80%;height: 80%" id="eee">
+<script>
+    $(function () {
+        var query = location.search;
+        $("#eee").attr("src", query.split("=")[1])
+
+    })
+</script>
+
+</body>
+</html>

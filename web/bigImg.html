@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.3.1.js"></script>
+</head>
+<body>
+<a onclick="kk()" href="javascript:void(0);">Welcome</a>
+<br>
+<br>
+<br>
+<br>
+<br>
+<img src="img/6.jpg" style="width: 100px;height: 100px" id="ee"> <a onclick="kk(this)" href="javascript:void(0);">Welcome</a>
+<div ></div>
+</body>
+<script>
+    function kk(obj) {
+        // var url = $("#ee").attr("src");
+        alert($(obj).prev().attr("src"))
+        // window.open("new.html?url="+url+"");
+    }
+</script>
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.3.1.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="table" id="tableDiv" style="overflow-x:auto;">
+<table class="table table-bordered table-striped table-condensed fixedTable" style="width: 4000px">
+
+    <tr>
+        <td>订单ID</td>
+        <td>订单时间</td>
+
+        <td>订单名称</td>
+
+        <td>订单类型</td>
+
+        <td>补单ID</td>
+
+        <td>客户名称</td>
+
+        <td>代理商</td>
+
+        <td>订单创建者</td>
+        <td>客户下单金额</td>
+        <td>实结金额</td>
+        <td>实结CPM金额差</td>
+        <td>实结曝光金额差</td>
+        <td>订单结算状态</td>
+        <td>操作</td>
+        <td>预定CPM</td>
+        <td>预定CPM单价</td>
+        <td>预定金额</td>
+        <td>实际跑量CPM</td>
+        <td>实际曝光量</td>
+        <td>实际点击量</td>
+        <td>实际点击率</td>
+        <td>实际单价</td>
+        <td>应结CPM金额</td>
+        <td>应结曝光金额</td>
+        <td>订单数量完成率</td>
+        <td>订单金额完成率</td>
+    </tr>
+    <tr>
+        <td>101039780</td>
+        <td>20200915---20201109</td>
+        <td>切换monitor</td>
+        <td>销售订单 </td>
+        <td></td>
+        <td>新增客户数据</td>
+        <td>新增代理商</td>
+        <td>hjx3</td>
+
+        <td>
+            0.00
+        </td>
+        <td>
+
+
+
+            0.00
+
+
+        </td>
+        <td>
+
+
+            0.00
+
+
+
+        </td>
+        <td>
+
+
+            0.00
+
+
+
+        </td>
+        <td>
+            未结算
+
+
+
+        </td>
+        <td>
+
+
+            <a href="javascript:void(0);" onclick="totalSettleConfirm('101039780','','1')">运营预结算</a>&emsp;<a href="javascript:void(0);" onclick="totalSettleConfirm('101039780','','3')">查看详情</a>
+
+
+
+
+        </td>
+        <td>105</td>
+        <td>
+
+
+
+            1.00
+
+
+        </td>
+        <td>
+            105.00
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+
+        <td>
+            0.00%
+        </td>
+        <td>
+
+            0.00
+
+
+
+
+
+        </td>
+        <td>
+
+
+            0.00
+
+        </td>
+        <td>
+
+
+            0.00
+
+
+        </td>
+        <td>
+            0.00%
+        </td>
+        <td>
+            0.00%
+        </td>
+    </tr>
+
+
+    <tr>
+        <td>101039580</td>
+        <td>20200914---20201011</td>
+        <td>频控测试</td>
+        <td>            销售订单        </td>
+        <td>      </td>
+        <td>maoli0427</td>
+        <td>丰东股份</td>
+        <td>哈哈哈</td>
+        <td>
+            0.00
+        </td>
+        <td>
+
+
+
+            0.00
+
+
+        </td>
+        <td>
+
+
+            0.00
+
+
+
+        </td>
+        <td>
+
+
+            0.00
+
+
+
+        </td>
+        <td>
+            未结算
+
+
+
+        </td>
+        <td>
+
+
+            <a href="javascript:void(0);" onclick="totalSettleConfirm('101039580','','1')">运营预结算</a>&emsp;<a href="javascript:void(0);" onclick="totalSettleConfirm('101039580','','3')">查看详情</a>
+
+
+
+
+        </td>
+        <td>13</td>
+        <td>
+
+
+
+            1.00
+
+
+        </td>
+        <td>
+            13.00
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+
+        <td>
+            0.00%
+        </td>
+        <td>
+
+            0.00
+
+
+
+
+
+        </td>
+        <td>
+
+
+            0.00
+
+        </td>
+        <td>
+
+
+            0.00
+
+
+        </td>
+        <td>
+            0.00%
+        </td>
+        <td>
+            0.00%
+        </td>
+    </tr>
+
+
+    <tr>
+        <td>101039547</td>
+
+        <td>20200914---20200919</td>
+        <td>lw广告0914</td>
+        <td>
+            销售订单
+
+
+
+
+        </td>
+        <td>
+
+
+        </td>
+        <td>测试</td>
+        <td>丰东股份</td>
+        <td>screenlock</td>
+        <td>
+            0.00
+        </td>
+        <td>
+
+
+
+            0.00
+
+
+        </td>
+        <td>
+
+
+            0.00
+
+
+
+        </td>
+        <td>
+
+
+            0.00
+
+
+
+        </td>
+        <td>
+            未结算
+
+
+
+        </td>
+        <td>
+
+
+            <a href="javascript:void(0);" onclick="totalSettleConfirm('101039547','','1')">运营预结算</a>&emsp;<a href="javascript:void(0);" onclick="totalSettleConfirm('101039547','','3')">查看详情</a>
+
+
+
+
+        </td>
+        <td>12</td>
+        <td>
+
+
+
+            9.00
+
+
+        </td>
+        <td>
+            108.00
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+
+        <td>
+            0.00%
+        </td>
+        <td>
+
+            0.00
+
+
+
+
+
+        </td>
+        <td>
+
+
+            0.00
+
+        </td>
+        <td>
+
+
+            0.00
+
+
+        </td>
+        <td>
+            0.00%
+        </td>
+        <td>
+            0.00%
+        </td>
+    </tr>
+
+</table>
+</div>
+</body>
+<script>
+    $("#tableDiv").scroll(function(){//给table外面的div滚动事件绑定一个函数
+        var left=$("#tableDiv").scrollLeft();//获取滚动的距离
+        var trs=$("#tableDiv table tr");//获取表格的所有tr
+        trs.each(function(i){//对每一个tr（每一行）进行处理
+//获得每一行下面的所有的td，然后选中下标为0的，即第一列，设置position为相对定位
+//相对于父div左边的距离为滑动的距离，然后设置个背景颜色，覆盖住后面几列数据滑动到第一列下面的情况
+//如果有必要也可以设置一个z-index属性
+            $(this).children().eq(0).css({"position":"relative","top":"0px","left":left,"background-color":"white"});
+            $(this).children().eq(1).css({"position":"relative","top":"0px","left":left,"background-color":"white"});
+            $(this).children().eq(2).css({"position":"relative","top":"0px","left":left,"background-color":"white"});
+            $(this).children().eq(3).css({"position":"relative","top":"0px","left":left,"background-color":"white"});
+            $(this).children().eq(4).css({"position":"relative","top":"0px","left":left,"background-color":"white"});
+            $(this).children().eq(5).css({"position":"relative","top":"0px","left":left,"background-color":"white"});
+            $(this).children().eq(6).css({"position":"relative","top":"0px","left":left,"background-color":"white"});
+            $(this).children().eq(7).css({"position":"relative","top":"0px","left":left,"background-color":"white"});
+        });
+    });
+</script>
+</html>
